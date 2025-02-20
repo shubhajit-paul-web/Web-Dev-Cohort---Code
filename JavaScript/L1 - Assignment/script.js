@@ -126,3 +126,116 @@
 //     console.log("Fail");
 // }
 
+// ? Question 12: Simple Login System - Set a predefined username and password. Ask the user to enter their credentials using prompt(). If correct, print "Login Successful"; otherwise, print "Incorrect username or password".
+
+// const username = "shubhajit_045";
+// const password = "123abc";
+
+// const usernameInput = prompt("Enter your username");
+// const passwordInput = prompt("Enter your password");
+
+// if (usernameInput === username && passwordInput === password) {
+//     console.log(username, ", Login Successful");
+// } else {
+//     console.log("⚠️ Incorrect username or password!");
+// }
+
+
+// ? Question 22: Nested Condition Challenge - Ask the user for their age and salary. Print a message based on conditions: 
+// If age is below 18, print "Not eligible" 
+// If age is 18 or more but salary is less than 20,000, print "Low Salary" 
+// If salary is ₹50,000 or more, print "High Salary" 
+// . Otherwise, print "Medium Salary"
+
+// const age = prompt("Enter your age");
+// const salary = Number(prompt("Enter your salary"));
+
+// if (age < 18) {
+//     console.log("Not eligible");
+// } else if (age >= 18) {
+//     if (salary < 20000) {
+//         console.log("Low Salary");
+//     } else if (salary >= 50000) {
+//         console.log("High Salary");
+//     } else {
+//         console.log("Medium Salary");
+//     }
+// }
+
+
+// ? Write a program that prints numbers from 1 to 10 using a for loop. Extra Challenge: Print only even numbers.
+
+// for(let i = 0; i <= 10; i++) {
+//     if (i % 2 === 0) {
+//         console.log(i);
+//     }
+// }
+
+
+// ? Write a program that prints numbers from 10 to 1 using a while loop.
+
+// let i = 10;
+
+// while (i > 0) {
+//     console.log(i);
+//     i--;
+// }
+
+
+// ? Write a program that finds the sum of numbers from 1 to 100 using a loop. Extra Challenge: Find the sum of only odd numbers between 1 and 100.
+
+// let sum = 0;
+
+// for(let i = 1; i <= 100; i++) {
+//     if (i % 2 !== 0) {
+//         sum += i;
+//     }
+// }
+
+// console.log(sum);
+
+
+// ? Take a number from the user and print its multiplication table (e.g., 5 × 1 = 5 to 5 × 10 = 50). Extra Challenge: Use a while loop instead of a for loop.
+
+// const number = Number(prompt("Enter a number"));
+
+// let i = 1;
+// while (i <= 10) {
+//     console.log(`${number} x ${i} = ${number * i}`);
+//     i++;
+// }
+
+
+// ? Print this pattern using loops
+
+// for(let i = 1; i <= 5; i++) {
+//     for(let x = 1; x <= i; x++) {
+//         document.write("*");
+//     }
+//     document.write("<br>");
+// }
+
+// ? Reverse order
+// for(let i = 5; i >= 1; i--) {
+//     for(let x = 1; x <= i; x++) {
+//         document.write("*");
+//     }
+//     document.write("<br>");
+// }
+
+
+// ? FizzBuzz Problem
+// Print numbers from 1 to 50, but:
+// If a number is divisible by 3, print "Fizz".
+// If a number is divisible by 5, print "Buzz".
+// If a number is divisible by both 3 and 5, print "FizzBuzz".
+
+// for(let i = 1; i <= 50; i++) {
+//     if (i % 3 === 0) {
+//         console.log("Fizz");
+//     } else if (i % 5 === 0) {
+//         console.log("Buzz");
+//     } else if (i % 3 === 0 && i % 5 === 0) {
+//         console.log("FizzBuzz");
+//     }
+// }
