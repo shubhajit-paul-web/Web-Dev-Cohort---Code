@@ -239,3 +239,21 @@
 //         console.log("FizzBuzz");
 //     }
 // }
+
+
+// ? Find the largest number in an array
+// Take an array like [10, 45, 99, 23, 67] and find the largest number using a loop.
+
+// let arr = [10, 45, 99, 23, 67];
+
+// let largestNum = 0;
+
+// for (let i = 0; i < arr.length; i++) {
+//     for(let x = 0; x < arr.length; x++) {
+//         if (arr[i] < arr[x]) {
+//             largestNum = arr[x];
+//         }
+//     }
+// }
+
+// console.log(largestNum);
