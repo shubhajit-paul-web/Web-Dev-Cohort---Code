@@ -19,10 +19,13 @@
 // greetmen(undefined)
 
 
-// fat arrow function
+// IIFE (Immediately Invoked Function Expression)
 
-const add = (a, b) => a + b;
+// (function(a, b) {
+//     console.log(a, b, "hello duniya...");
+// })("Shubhajit", "Paul,")
 
-let ans = add(5, 10);
+// outside this,
+// write variables, functions, etc. out of any scope/boundary
 
-console.log(ans);
+// {}, (), [] - local scope
