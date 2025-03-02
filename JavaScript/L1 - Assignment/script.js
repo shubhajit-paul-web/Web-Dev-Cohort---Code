@@ -257,3 +257,25 @@
 // }
 
 // console.log(largestNum);
+
+// ? Discount amount calculator
+
+const amount = Number(prompt("What is the final amount?"));
+
+let discount = 0;
+
+if (!isNaN(amount)) {
+    if (amount <= 5000) {
+        discount = 0;
+    } else if (amount > 5000 && amount <= 7000) {
+        discount = 5;
+    } else if (amount > 7000 && amount <= 9000) {
+        discount = 10;
+    } else if (amount > 9000) {
+        discount = 20;
+    }
+
+    console.log("Final amount to pay:", amount - Math.floor((discount * amount) / 100));
+} else {
+    console.log("Please enter a valid number/amount...");
+}
