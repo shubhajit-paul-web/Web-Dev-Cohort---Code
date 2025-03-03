@@ -258,24 +258,106 @@
 
 // console.log(largestNum);
 
+
 // ? Discount amount calculator
 
-const amount = Number(prompt("What is the final amount?"));
+// const amount = Number(prompt("What is the final amount?"));
 
-let discount = 0;
+// let discount = 0;
 
-if (!isNaN(amount)) {
-    if (amount <= 5000) {
-        discount = 0;
-    } else if (amount > 5000 && amount <= 7000) {
-        discount = 5;
-    } else if (amount > 7000 && amount <= 9000) {
-        discount = 10;
-    } else if (amount > 9000) {
-        discount = 20;
-    }
+// if (!isNaN(amount)) {
+//     if (amount <= 5000) {
+//         discount = 0;
+//     } else if (amount > 5000 && amount <= 7000) {
+//         discount = 5;
+//     } else if (amount > 7000 && amount <= 9000) {
+//         discount = 10;
+//     } else if (amount > 9000) {
+//         discount = 20;
+//     }
 
-    console.log("Final amount to pay:", amount - Math.floor((discount * amount) / 100));
-} else {
-    console.log("Please enter a valid number/amount...");
-}
+//     console.log("Final amount to pay:", amount - Math.floor((discount * amount) / 100));
+// } else {
+//     console.log("Please enter a valid number/amount...");
+// }
+
+
+// ? Question 1: Return only name of students in capital
+
+// const students = [
+//     {name: "Shubhajit", rollNumber: 31, marks: 80},
+//     {name: "Debu", rollNumber: 15, marks: 69},
+//     {name: "Balaram", rollNumber: 16, marks: 35},
+//     {name: "Raju", rollNumber: 7, marks: 55},
+// ];
+
+// // const studentsNames = students.map((student) => student.name.toUpperCase());
+
+// let studentsNames = [];
+
+// for(let i = 0; i <= students.length - 1; i++) {
+//     studentsNames.push(students[i].name.toUpperCase());
+// }
+
+// console.log(studentsNames);
+
+
+// ? Question 2: Return only details of those who scored more than 60 marks
+
+// const students = [
+//     {name: "Shubhajit", rollNumber: 31, marks: 80},
+//     {name: "Debu", rollNumber: 15, marks: 69},
+//     {name: "Balaram", rollNumber: 16, marks: 35},
+//     {name: "Raju", rollNumber: 7, marks: 55},
+// ];
+
+// const goodStudentsDetails = students.filter((student) => student.marks >= 60);
+
+// console.log(goodStudentsDetails);
+
+
+// ? Question 3: More than 60 marks and rollNumber greater than 15
+
+// const students = [
+//     {name: "Shubhajit", rollNumber: 31, marks: 80},
+//     {name: "Debu", rollNumber: 15, marks: 69},
+//     {name: "Balaram", rollNumber: 16, marks: 35},
+//     {name: "Raju", rollNumber: 7, marks: 75},
+// ];
+
+// const studentsDetails = students.filter((student) => student.rollNumber >= 15 && student.marks >= 60);
+
+// console.log(studentsDetails);
+
+
+// ? Question 4: Sum of marks of all students
+
+// const students = [
+//     {name: "Shubhajit", rollNumber: 31, marks: 80},
+//     {name: "Debu", rollNumber: 15, marks: 69},
+//     {name: "Balaram", rollNumber: 16, marks: 35},
+//     {name: "Raju", rollNumber: 7, marks: 75},
+// ];
+
+// const sumOfMarks = students.reduce((acc, student) => acc + student.marks, 0);
+
+// console.log(sumOfMarks);
+
+
+// ? Question 5: Return only names of students who scored more than 60
+
+// const students = [
+//     {name: "Shubhajit", rollNumber: 31, marks: 80},
+//     {name: "Debu", rollNumber: 15, marks: 69},
+//     {name: "Balaram", rollNumber: 16, marks: 35},
+//     {name: "Raju", rollNumber: 7, marks: 55},
+// ];
+
+// let studentsNames = [];
+// students.forEach((student) => {
+//     if (student.marks >= 60) {
+//         studentsNames.push(student.name);
+//     }
+// });
+
+// console.log(studentsNames);
