@@ -441,18 +441,117 @@
 // console.log(`Total Debit: ${transactionsAmount.debit}, Total Credit: ${transactionsAmount.credit}`);
 
   
-// TODO: ? Real-world Question 6: Find the Most Expensive Product
+// ? Real-world Question 6: Find the Most Expensive Product
 // Output: "Laptop"
 
-const products = [
-    { name: "Phone", price: 20000 },
-    { name: "Laptop", price: 60000 },
-    { name: "Tablet", price: 30000 }
-];
+// const products = [
+//     { name: "Phone", price: 20000 },
+//     { name: "Laptop", price: 60000 },
+//     { name: "Tablet", price: 30000 }
+// ];
 
-const expensiveProduct = products.reduce((acc, product) => {
-    acc = product.price;
-    // if () {
-        
-    // }
-}, products[0].price)
+// const highestProduct = products.reduce((acc, product) => {
+//     if (acc < product.price) {
+//         acc = product.price;
+//     }
+//     return acc;
+// }, products[0].price);
+
+// const expensiveProduct = products.filter((product) => product.price === highestProduct)[0].name;
+
+// console.log(expensiveProduct);
+
+
+// ? Real-world Question 7: Calculate Average Rating from Reviews
+// Output: Average Rating: 4
+
+// const reviews = [
+//     { user: "Amit", rating: 4 },
+//     { user: "Neha", rating: 5 },
+//     { user: "Rahul", rating: 3 }
+// ];
+
+// const sumOfReviews = reviews.reduce((acc, review) => {
+//     return acc += review.rating / reviews.length;
+// }, 0);
+
+// console.log(sumOfReviews);
+
+
+// ? Real-world Question 8: Get All Unique Tags from Blog Posts
+// Output: ["JavaScript", "Frontend", "Backend", "Design"]
+
+// const posts = [
+//     { title: "React", tags: ["JavaScript", "Frontend"] },
+//     { title: "Node.js", tags: ["JavaScript", "Backend"] },
+//     { title: "CSS", tags: ["Frontend", "Design"] }
+// ];
+
+// const allTags = [];
+
+// posts.forEach((post) => {
+//     post.tags.forEach((tag) => allTags.push(tag));
+// });
+
+// const uniqueTags = [...new Set(allTags)];
+
+// console.log(uniqueTags);
+
+
+// ? Real-world Question 9: Categorize Expenses by Type
+// Output: { Food: 500, Transport: 100 }
+
+// const expenses = [
+//     { category: "Food", amount: 200 },
+//     { category: "Transport", amount: 100 },
+//     { category: "Food", amount: 300 }
+// ];
+
+// const obj = {};
+
+// const expensesByType = expenses.reduce((acc, elem) => {
+//     if (acc[elem.category]) {
+//         acc[elem.category] += elem.amount;
+//     } else {
+//         acc[elem.category] = elem.amount;
+//     }
+
+//     return acc;
+// }, {});
+
+// console.log(expensesByType);
+
+
+// ? Real-world Question 10: Super Challenge – Build a Data Processing Pipeline
+// Task: Given a list of students,
+// Remove students with scores < 50
+// Convert names to uppercase
+// Find the average score of remaining students
+
+// Output:
+// ["NEHA", "RAHUL"]
+// Average Score: 70
+
+// const students = [
+//     { name: "Amit", score: 45 },
+//     { name: "Neha", score: 85 },
+//     { name: "Rahul", score: 55 }
+// ];
+  
+// const filteredStudents = students.filter((student) => student.score > 50);
+// const studentsNames = filteredStudents.map((student) => student.name.toUpperCase());
+
+// const avgScore = filteredStudents.reduce((acc, student, i, arr) => {
+//     let totalScore = filteredStudents.reduce((acc, elem) => acc += elem.score, 0);
+//     return totalScore / arr.length;
+// }, 0);
+
+// console.log(studentsNames);
+// console.log("Average Score:", avgScore);
+
+
+
+
+
+
+  
