@@ -159,18 +159,22 @@ if (inputValue !== null) {
     if (!isNaN(n)) {
         if (n > 0) {
             // Main logic
-            let sumOfNums = n;
-            for(let i = 1; i <= Math.floor(n/2); i++) {
-                if (n % i === 0) {
-                    sumOfNums += i;
+            let sumOfNums = 0;
+            let num = n;
+
+            while(num > 0) {
+                let last_digit = num % 10; 
+                let fact = 1;
+                
+                for(let i = 1; i <= last_digit; i++) {
+                    fact *= i; 
                 }
+                
+                sumOfNums += fact;
+                num = Math.floor(num/10);
             }
-            
-            if (sumOfNums === n) {
-                console.log(n, "is a strong number");
-            } else {
-                console.log(n, "is not a strong number!!!");
-            }
+
+            console.log(`${n} is${sumOfNums === n ? "" : " not"} a Strong Number`);
         } else {
             console.warn("Enter a number which is greater than 0");
         }
