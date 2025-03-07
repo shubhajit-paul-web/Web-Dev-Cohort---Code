@@ -151,36 +151,65 @@
 
 // ? Question 6: Strong number
 
-const inputValue = prompt("Enter a number?");
+// const inputValue = prompt("Enter a number?");
 
-if (inputValue !== null) {
-    let n = Number(inputValue);
+// if (inputValue !== null) {
+//     let n = Number(inputValue);
 
-    if (!isNaN(n)) {
-        if (n > 0) {
-            // Main logic
-            let sumOfNums = 0;
-            let num = n;
+//     if (!isNaN(n)) {
+//         if (n > 0) {
+//             // Main logic
+//             let sumOfNums = 0;
+//             let num = n;
 
-            while(num > 0) {
-                let last_digit = num % 10; 
-                let fact = 1;
+//             while(num > 0) {
+//                 let last_digit = num % 10; 
+//                 let fact = 1;
                 
-                for(let i = 1; i <= last_digit; i++) {
-                    fact *= i; 
-                }
+//                 for(let i = 1; i <= last_digit; i++) {
+//                     fact *= i; 
+//                 }
                 
-                sumOfNums += fact;
-                num = Math.floor(num/10);
+//                 sumOfNums += fact;
+//                 num = Math.floor(num/10);
+//             }
+
+//             console.log(`${n} is${sumOfNums === n ? "" : " not"} a Strong Number`);
+//         } else {
+//             console.warn("Enter a number which is greater than 0");
+//         }
+//     } else {
+//         console.warn("Please enter a valid number!!!");
+//     }
+// } else {
+//     console.warn("You press cancle button, Try again...");
+// }
+
+
+// ? Question 7: Guess the number
+
+let randomNum = Math.floor(Math.random() * 21); // 0 to 20
+let gueesNum = -1;
+let attempt = 5;
+        
+while(gueesNum !== randomNum) {
+    if (attempt > 0) {
+        gueesNum = Number(prompt(`Guess the number between 0 to 20 (${attempt} attempts left)`));
+
+        if (!isNaN(gueesNum) && gueesNum <= 20 && gueesNum >= 0) {
+            if (gueesNum > randomNum) {
+                console.log(`to high ⬆️, try again`);
+            } else if (gueesNum < randomNum) {
+                console.log(`to low ⬇️, try again`);
+            } else {
+                console.log(`Congrats 🎊 and the number was ${gueesNum}`);
             }
-
-            console.log(`${n} is${sumOfNums === n ? "" : " not"} a Strong Number`);
+            attempt--;
         } else {
-            console.warn("Enter a number which is greater than 0");
+            console.log("Try again, between 0 to 20");
         }
     } else {
-        console.warn("Please enter a valid number!!!");
+        console.log("Your limit is reached... 😔");
+        break;
     }
-} else {
-    console.warn("You press cancle button, Try again...");
 }
