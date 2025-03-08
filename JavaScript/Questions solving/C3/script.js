@@ -188,28 +188,105 @@
 
 // ? Question 7: Guess the number
 
-let randomNum = Math.floor(Math.random() * 21); // 0 to 20
-let gueesNum = -1;
-let attempt = 5;
+// let randomNum = Math.floor(Math.random() * 21); // 0 to 20
+// let gueesNum = -1;
+// let attempt = 5;
         
-while(gueesNum !== randomNum) {
-    if (attempt > 0) {
-        gueesNum = Number(prompt(`Guess the number between 0 to 20 (${attempt} attempts left)`));
+// while(gueesNum !== randomNum) {
+//     if (attempt > 0) {
+//         gueesNum = Number(prompt(`Guess the number between 0 to 20 (${attempt} attempts left)`));
 
-        if (!isNaN(gueesNum) && gueesNum <= 20 && gueesNum >= 0) {
-            if (gueesNum > randomNum) {
-                console.log(`to high ⬆️, try again`);
-            } else if (gueesNum < randomNum) {
-                console.log(`to low ⬇️, try again`);
-            } else {
-                console.log(`Congrats 🎊 and the number was ${gueesNum}`);
-            }
-            attempt--;
-        } else {
-            console.log("Try again, between 0 to 20");
-        }
-    } else {
-        console.log("Your limit is reached... 😔");
-        break;
-    }
-}
+//         if (!isNaN(gueesNum) && gueesNum <= 20 && gueesNum >= 0) {
+//             if (gueesNum > randomNum) {
+//                 console.log(`to high ⬆️, try again`);
+//             } else if (gueesNum < randomNum) {
+//                 console.log(`to low ⬇️, try again`);
+//             } else {
+//                 console.log(`Congrats 🎊 and the number was ${gueesNum}`);
+//             }
+//             attempt--;
+//         } else {
+//             console.log("Try again, between 0 to 20");
+//         }
+//     } else {
+//         console.log("Your limit is reached... 😔");
+//         break;
+//     }
+// }
+
+
+// ? Q8: Find the Sum of Digits Until It Becomes a Single Digit
+// Input: 987
+// Step 1: 9 + 8 + 7 = 24  
+// Step 2: 2 + 4 = 6  
+// Output: 6  
+
+// function sumOfDigits(num) {
+//     while(num >= 10) {
+//         let sum = 0;
+
+//         while(num > 0) {
+//             sum += num % 10;
+//             num = Math.floor(num / 10);
+//         }
+
+//         num = sum;
+//     }
+
+//     return num;
+// }
+
+// const ans = sumOfDigits(987);
+// console.log(ans);
+
+
+// ? Q9: Find All Prime Numbers in a Given Range
+// Input: (10, 30)  
+// Output: [11, 13, 17, 19, 23, 29]
+
+
+// function primeNumbers(num1, num2) {
+//     if (num1 < num2) {
+//         const primeNumsArr = [];
+
+//         for(let i = num1; i <= num2; i++) {
+//             let isPrime = true;
+
+//             for(let j = 2; j <= Math.floor(Math.sqrt(i)); j++) {
+//                 if (i % j === 0) {
+//                     isPrime = false;
+//                     break;
+//                 }
+//             }
+
+//             if (isPrime) {
+//                 primeNumsArr.push(i);
+//             }
+//         }
+
+//         return primeNumsArr;
+//     } else {
+//         console.warn("Error: 1st value is greater than 2nd value, fix it.");
+//     }
+// }
+
+// const ans = primeNumbers(10, 30);
+// console.log(ans);
+
+
+// ? Q10: Print This Crazy Pattern
+// 1  
+// 2 3  
+// 4 5 6  
+// 7 8 9 10 
+
+// let counter = 1;
+// for(let i = 1; i <= 4; i++) {
+//     let text = "";
+
+//     for(let j = 1; j <= i; j++) {
+//         text += counter++ + " ";
+//     }
+
+//     console.log(text);
+// }
