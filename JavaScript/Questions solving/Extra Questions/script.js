@@ -551,19 +551,46 @@
 
 
 // ? Real-world Question 11: Indian Currency Notes Breakdown
-let amount = 4353; // Any amount
-let numOfNotes = 0;
+// let amount = 4353; // Any amount
+// let numOfNotes = 0;
 
-const notes = [2000, 500, 200, 100, 50, 20, 10, 5, 2, 1];
+// const notes = [2000, 500, 200, 100, 50, 20, 10, 5, 2, 1];
 
-for(let i = 0; i < notes.length; i++) {
-    if (amount >= notes[i]) {
-        numOfNotes = Math.floor(amount / notes[i]);
-        console.log(`${notes[i]} x ${numOfNotes}`);
-        amount -= notes[i] * numOfNotes;
+// for(let i = 0; i < notes.length; i++) {
+//     if (amount >= notes[i]) {
+//         numOfNotes = Math.floor(amount / notes[i]);
+//         console.log(`${notes[i]} x ${numOfNotes}`);
+//         amount -= notes[i] * numOfNotes;
+//     } else {
+//         console.log(`${notes[i]} x 0`);
+//     }
+// }
+
+
+// ? Real-world Question 12: Write a program to accept rating of the movie as double and Movie name as String.
+
+function movieRatingAssign(movieName = "", rating = 0) {
+    if (movieName.length > 0 && !isNaN(rating)) {
+        let msg = "";
+        if (rating >= 0 && rating <= 2) {
+            msg = "Flop";
+        } else if (rating >= 2.1 && rating <= 3.4) {
+            msg = "Semi-hit";
+        } else if (rating >= 3.5 && rating <= 4.5) {
+            msg = "Hit";
+        } else if (rating >= 4.6 && rating <= 5) {
+            msg = "Super Hit";
+        }
+
+        return `${movieName} is a ${msg} Movie.`;
     } else {
-        console.log(`${notes[i]} x 0`);
+        return "Please pass correct arguments: moveName is in string and rating will be number";
     }
 }
+
+console.log(movieRatingAssign("KGF", 4.9));
+console.log(movieRatingAssign("RRR", 2.1));
+console.log(movieRatingAssign("Venom", 4.1));
+
 
   
