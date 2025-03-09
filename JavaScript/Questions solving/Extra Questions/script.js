@@ -550,7 +550,20 @@
 // console.log("Average Score:", avgScore);
 
 
+// ? Real-world Question 11: Indian Currency Notes Breakdown
+let amount = 4353; // Any amount
+let numOfNotes = 0;
 
+const notes = [2000, 500, 200, 100, 50, 20, 10, 5, 2, 1];
 
+for(let i = 0; i < notes.length; i++) {
+    if (amount >= notes[i]) {
+        numOfNotes = Math.floor(amount / notes[i]);
+        console.log(`${notes[i]} x ${numOfNotes}`);
+        amount -= notes[i] * numOfNotes;
+    } else {
+        console.log(`${notes[i]} x 0`);
+    }
+}
 
   
