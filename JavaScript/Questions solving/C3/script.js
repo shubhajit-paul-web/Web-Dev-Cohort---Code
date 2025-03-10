@@ -290,3 +290,29 @@
 
 //     console.log(text);
 // }
+
+
+// ? Q10: Reverse a Array without extra array and in-build methods
+function arrayReverse(arr = []) {
+    if (Array.isArray(arr)) {
+        let i = 0;
+        let j = arr.length - 1;
+        // Method 1: My own thinking - method
+        // for (let i = 0; i <= Math.floor((arr.length - 1) / 2); i++) {
+        //     [arr[i], arr[j]] = [arr[j], arr[i]];
+        //     j--;
+        // }
+        // Method 2: My mentor teach
+        while(i < j) {
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+            i++;
+            j--;
+        }
+        return arr;
+    }
+    return "Error: This is not an Array";
+}
+
+console.log(arrayReverse([10, 20, 30, 40, 50, 60, 70, 80]));
+console.log(arrayReverse(["A", "B", "C"]));
+console.log(arrayReverse('hello'));
