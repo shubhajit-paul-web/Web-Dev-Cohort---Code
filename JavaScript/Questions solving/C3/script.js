@@ -293,26 +293,43 @@
 
 
 // ? Q10: Reverse a Array without extra array and in-build methods
-function arrayReverse(arr = []) {
-    if (Array.isArray(arr)) {
-        let i = 0;
-        let j = arr.length - 1;
-        // Method 1: My own thinking - method
-        // for (let i = 0; i <= Math.floor((arr.length - 1) / 2); i++) {
-        //     [arr[i], arr[j]] = [arr[j], arr[i]];
-        //     j--;
-        // }
-        // Method 2: My mentor teach
-        while(i < j) {
-            [arr[i], arr[j]] = [arr[j], arr[i]];
-            i++;
-            j--;
-        }
-        return arr;
+// function arrayReverse(arr = []) {
+//     if (Array.isArray(arr)) {
+//         let i = 0;
+//         let j = arr.length - 1;
+//         // Method 1: My own thinking - method
+//         // for (let i = 0; i <= Math.floor((arr.length - 1) / 2); i++) {
+//         //     [arr[i], arr[j]] = [arr[j], arr[i]];
+//         //     j--;
+//         // }
+//         // Method 2: My mentor teach
+//         while(i < j) {
+//             [arr[i], arr[j]] = [arr[j], arr[i]];
+//             i++;
+//             j--;
+//         }
+//         return arr;
+//     }
+//     return "Error: This is not an Array";
+// }
+
+// console.log(arrayReverse([10, 20, 30, 40, 50, 60, 70, 80]));
+// console.log(arrayReverse(["A", "B", "C"]));
+// console.log(arrayReverse('hello'));
+
+
+// ? Q11: Move all '0's on left side and all '1's on right side
+let arr = [0, 1, 0, 1, 0, 0, 1, 0, 1];
+//                         (i) 
+// [0, 0, 0, 0, 0, 1, 1, 1, 1]
+//                (j)
+
+let j = 0; // 5
+for(let i = 0; i < arr.length; i++) {
+    if (arr[i] === 0) {
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+        j++;
     }
-    return "Error: This is not an Array";
 }
 
-console.log(arrayReverse([10, 20, 30, 40, 50, 60, 70, 80]));
-console.log(arrayReverse(["A", "B", "C"]));
-console.log(arrayReverse('hello'));
+console.log(arr);
