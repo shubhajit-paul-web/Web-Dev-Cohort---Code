@@ -68,23 +68,40 @@ without leaving a remainder.
 /* Description: A number is a Harshad number if it is divisible by the sum of its
 digits. */
 
-function isHarshadNum(num = 0) {
+// function isHarshadNum(num = 0) {
+//     if (Number.isInteger(num)) {
+//         let numCopy = num;
+//         let sumOfDigits = 0;
+
+//         while(numCopy > 0) {
+//             sumOfDigits += numCopy % 10;
+//             numCopy = Math.floor(numCopy/10);
+//         }
+        
+//         if (num % sumOfDigits === 0) {
+//             return `${num} is a Harshad Number`;
+//         }
+//         return `${num} is not a Harshad Number`;
+//     } else {
+//         return "Please provide a number.";
+//     }
+// }
+
+// console.log(isHarshadNum(18));
+
+
+// ? Question 4: Perfect Square
+/* Description: A number is a perfect square if it is the square of an integer. */
+
+function isPerfectSquare(num = 0) {
     if (Number.isInteger(num)) {
-        let numCopy = num;
-        let sumOfDigits = 0;
-        
-        while(numCopy > 0) {
-            sumOfDigits += numCopy % 10;
-            numCopy = Math.floor(numCopy/10);
+        if (Number.isInteger(Math.sqrt(num))) {
+            return `${num} is a Perfect Square.`;
         }
-        
-        if (num % sumOfDigits === 0) {
-            return `${num} is a Harshad Number`;
-        }
-        return `${num} is not a Harshad Number`;
+        return `${num} is not a Perfect Square!!`;
     } else {
-        return "Please provide a number.";
+        return `${num} is not a Integer.`;
     }
 }
 
-console.log(isHarshadNum(18));
+console.log(isPerfectSquare(25));
