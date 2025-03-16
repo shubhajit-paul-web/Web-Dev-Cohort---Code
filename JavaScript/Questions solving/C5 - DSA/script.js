@@ -93,15 +93,64 @@ digits. */
 // ? Question 4: Perfect Square
 /* Description: A number is a perfect square if it is the square of an integer. */
 
-function isPerfectSquare(num = 0) {
-    if (Number.isInteger(num)) {
-        if (Number.isInteger(Math.sqrt(num))) {
-            return `${num} is a Perfect Square.`;
+// function isPerfectSquare(num = 0) {
+//     if (Number.isInteger(num)) {
+//         if (Number.isInteger(Math.sqrt(num))) {
+//             return `${num} is a Perfect Square.`;
+//         }
+//         return `${num} is not a Perfect Square!!`;
+//     } else {
+//         return `${num} is not a Integer.`;
+//     }
+// }
+
+// console.log(isPerfectSquare(25));
+
+
+// ? Question 5: Abundant Number
+/* Description: A number is abundant if the sum of its proper divisors is greater
+than the number itself. */
+
+// function isAbundant(num = 0) {
+//     if (Number.isInteger(num)) {
+//          let sum = 0;
+//          for(let i = 1; i <= Math.floor(num/2); i++) {
+//             if (num % i === 0) sum += i;
+//          }
+         
+//          if (sum > num) {
+//             return `${num} is a Abundant Number.`;
+//          }
+//          return `${num} is not a Abundant Number!!`;
+//     } else {
+//         return `${num} is not a Integer.`;
+//     }
+// }
+
+// console.log(isAbundant(12));
+// console.log(isAbundant(15));
+// console.log(isAbundant(66));
+
+
+// ? Question 6: Fibonacci Series using Loop
+/* Description: Print Fibonacci series up to N terms using a loop. 
+   Formula: Next Number = Previous Number + Second Last Number
+*/
+
+function fibonacciSeries(N) {
+    if (Number.isInteger(N) && N > 2) {
+        let seriesArr = [0, 1];
+        for(let i = 2; i < N; i++) {
+            let len = seriesArr.length;
+            seriesArr[len] = seriesArr[len - 2] + seriesArr[len - 1];
         }
-        return `${num} is not a Perfect Square!!`;
+        return seriesArr.toString();
     } else {
         return `${num} is not a Integer.`;
     }
 }
 
-console.log(isPerfectSquare(25));
+console.log(fibonacciSeries(6));
+console.log(fibonacciSeries(8));
+console.log(fibonacciSeries(10));
+console.log(fibonacciSeries(15));
