@@ -50,15 +50,41 @@ without leaving a remainder.
     Formula: GCD(a, b) = GCD(b, a % b)
 */
 
-function getGCD(a = 0, b = 0) {
-    if (a || b) {
-        while(b > 0) {
-            [a, b] = [b, a % b];
+// function getGCD(a = 0, b = 0) {
+//     if (a || b) {
+//         while(b > 0) {
+//             [a, b] = [b, a % b];
+//         }
+//         return a;
+//     } else {
+//         return `Please pass arguments to 'a' and 'b'`;
+//     }
+// }
+
+// console.log(getGCD(12, 18));
+
+
+// ? Question 3: Harshad Number
+/* Description: A number is a Harshad number if it is divisible by the sum of its
+digits. */
+
+function isHarshadNum(num = 0) {
+    if (Number.isInteger(num)) {
+        let numCopy = num;
+        let sumOfDigits = 0;
+        
+        while(numCopy > 0) {
+            sumOfDigits += numCopy % 10;
+            numCopy = Math.floor(numCopy/10);
         }
-        return a;
+        
+        if (num % sumOfDigits === 0) {
+            return `${num} is a Harshad Number`;
+        }
+        return `${num} is not a Harshad Number`;
     } else {
-        return `Please pass arguments to 'a' and 'b'`;
+        return "Please provide a number.";
     }
 }
 
-console.log(getGCD(12, 18));
+console.log(isHarshadNum(18));
