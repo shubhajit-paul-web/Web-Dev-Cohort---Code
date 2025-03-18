@@ -137,20 +137,26 @@ than the number itself. */
    Formula: Next Number = Previous Number + Second Last Number
 */
 
-function fibonacciSeries(N) {
-    if (Number.isInteger(N) && N > 2) {
-        let seriesArr = [0, 1];
-        for(let i = 2; i < N; i++) {
-            let len = seriesArr.length;
-            seriesArr[len] = seriesArr[len - 2] + seriesArr[len - 1];
-        }
-        return seriesArr.toString();
-    } else {
-        return `${num} is not a Integer.`;
-    }
-}
+// function fibonacciSeries(N) {
+//     if (Number.isInteger(N) && N > 2) {
+//         let seriesArr = [0, 1];
+//         for(let i = 2; i < N; i++) {
+//             let len = seriesArr.length;
+//             seriesArr[len] = seriesArr[len - 2] + seriesArr[len - 1];
+//         }
+//         return seriesArr.toString();
+//     } else {
+//         return `${num} is not a Integer.`;
+//     }
+// }
 
-console.log(fibonacciSeries(6));
-console.log(fibonacciSeries(8));
-console.log(fibonacciSeries(10));
-console.log(fibonacciSeries(15));
+// console.log(fibonacciSeries(6));
+// console.log(fibonacciSeries(8));
+// console.log(fibonacciSeries(10));
+// console.log(fibonacciSeries(15));
+
+
+// ? Question 7:  Find Numbers with Exactly X Divisors
+/* Description:  Find numbers that have exactly X divisors. 
+   Formula: Next Number = Previous Number + Second Last Number
+*/
