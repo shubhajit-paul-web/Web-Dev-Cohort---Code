@@ -1,24 +1,42 @@
-const N = 5;
+const prompt = require("prompt-sync")();
+const n = prompt("Enter a number: "); // 4
 
-for(let i = N; i > 0; i--) {
-    let spaceCount = N - i;
-    let centerSpace = N - 2; // 5 - 2 = 3
+// top
+for(let i = 0; i < n; i++) {
     let stars = "";
-    for(let j = 1; j <= (N*2)-1; j++) {
-        // if (j <= spaceCount) {
-        //     stars += "-";
-        // } else {
-        //     if (spaceCount === j) {
-        //         stars += "* ";
-                
-        //     }
-        // }
-        if (i+j === N*2 || i === j) {
-            stars += "* ";
-        } else {
-            stars += " ";
+
+    // Adding spaces
+    for(let j = 0; j < n-i; j++) {
+        stars += "  ";
+    }
+
+    // Adding stars
+    stars += "*";
+    if (i !== 0) {
+        for(let j = 0; j < (i * 2) - 1; j++) {
+            stars += "  ";
         }
+        stars += " *";
     }
     console.log(stars);
-    
+}
+
+// bottom
+for(let i = n; i > 1; i--) {
+    let stars = "";
+
+    // Adding spaces
+    for(let j = 0; j <= (n-i) + 1; j++) {
+        stars += "  ";
+    }
+
+    // Adding stars
+    stars += "*";
+    if (i !== (n-2)) {
+        for(let j = 0; j < ((i*2) - 1) - i; j++) {
+            stars += "  ";
+        }
+        stars += " *";
+    }
+    console.log(stars);
 }
