@@ -29,25 +29,50 @@
 
 // ? Pattern - Hollow Diamond
 
+// const prompt = require("prompt-sync")();
+// const n = prompt("Enter a number: "); // 4
+
+// for(let i = 0; i < n; i++) {
+//     let nums = "";
+    
+//     // spaces
+//     for(let j = 0; j < (n-i); j++) {
+//         nums += "  ";
+//     }
+
+//     // nums
+//     for(let y = 0; y <= i; y++) {
+//         nums += (y + 1) + " ";
+//     }
+
+//     for(let x = i; x > 0; x--) {
+//         nums += x + " ";
+//     }
+
+//     console.log(nums);
+// }
+
+
+// ? 'V' Shape Pattern
 const prompt = require("prompt-sync")();
-const n = prompt("Enter a number: "); // 4
+const n = prompt("Enter a number: "); // 5
 
 for(let i = 0; i < n; i++) {
-    let nums = "";
+    let stars = "";
+
+    // Spaces
+    for(let j = 0; j < i; j++) {
+        stars += " ";
+    }
+
+    // Stars
+    stars += "*";
+    if (i !== n-1) {
+        for(let j = ((n-i)*2)-3; j > 0; j--) {
+            stars += " ";
+        }
+        stars += "*";
+    }
     
-    // spaces
-    for(let j = 0; j < (n-i); j++) {
-        nums += "  ";
-    }
-
-    // nums
-    for(let y = 0; y <= i; y++) {
-        nums += (y + 1) + " ";
-    }
-
-    for(let x = i; x > 0; x--) {
-        nums += x + " ";
-    }
-
-    console.log(nums);
+    console.log(stars);
 }
