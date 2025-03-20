@@ -54,25 +54,50 @@
 
 
 // ? 'V' Shape Pattern
+// const prompt = require("prompt-sync")();
+// const n = prompt("Enter a number: "); // 5
+
+// for(let i = 0; i < n; i++) {
+//     let stars = "";
+
+//     // Spaces
+//     for(let j = 0; j < i; j++) {
+//         stars += " ";
+//     }
+
+//     // Stars
+//     stars += "*";
+//     if (i !== n-1) {
+//         for(let j = ((n-i)*2)-3; j > 0; j--) {
+//             stars += " ";
+//         }
+//         stars += "*";
+//     }
+    
+//     console.log(stars);
+// }
+
+// ? Square Hollow Pattern
 const prompt = require("prompt-sync")();
-const n = prompt("Enter a number: "); // 5
+const n = Number(prompt("Enter a number: ")); // 5
 
 for(let i = 0; i < n; i++) {
-    let stars = "";
+	let stars = "";
 
-    // Spaces
-    for(let j = 0; j < i; j++) {
-        stars += " ";
-    }
+	if (i === 0 || i === (n-1)) {
+		for(let j = 0; j < (n-1); j++) {
+			stars += "*   ";
+		}
+	} else {
+		for(let j = 0; j < (n-1); j++) {
+			if (j === 0 || j === (n-2)) {
+				stars += "*   ";
+			}
+			if(j !== 0 && j !== (n-2)) {
+				stars += "    ";
+			}
+		}
+	}
 
-    // Stars
-    stars += "*";
-    if (i !== n-1) {
-        for(let j = ((n-i)*2)-3; j > 0; j--) {
-            stars += " ";
-        }
-        stars += "*";
-    }
-    
-    console.log(stars);
+	console.log(stars);
 }
