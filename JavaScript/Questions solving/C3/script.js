@@ -78,26 +78,46 @@
 // }
 
 // ? Square Hollow Pattern
+// const prompt = require("prompt-sync")();
+// const n = Number(prompt("Enter a number: ")); // 5
+
+// for(let i = 0; i < n; i++) {
+// 	let stars = "";
+
+// 	if (i === 0 || i === (n-1)) {
+// 		for(let j = 0; j < (n-1); j++) {
+// 			stars += "*   ";
+// 		}
+// 	} else {
+// 		for(let j = 0; j < (n-1); j++) {
+// 			if (j === 0 || j === (n-2)) {
+// 				stars += "*   ";
+// 			}
+// 			if(j !== 0 && j !== (n-2)) {
+// 				stars += "    ";
+// 			}
+// 		}
+// 	}
+
+// 	console.log(stars);
+// }
+
+
+// ? Number Triangular Pattern
 const prompt = require("prompt-sync")();
-const n = Number(prompt("Enter a number: ")); // 5
+const n = Number(prompt("Enter a number: "));
 
 for(let i = 0; i < n; i++) {
-	let stars = "";
-
-	if (i === 0 || i === (n-1)) {
-		for(let j = 0; j < (n-1); j++) {
-			stars += "*   ";
-		}
-	} else {
-		for(let j = 0; j < (n-1); j++) {
-			if (j === 0 || j === (n-2)) {
-				stars += "*   ";
-			}
-			if(j !== 0 && j !== (n-2)) {
-				stars += "    ";
-			}
-		}
+	let nums = "";
+	
+	// adding spaces
+	for(let j = 0; j < (n-i) - 1; j++) {
+		nums += "  ";
 	}
 
-	console.log(stars);
+	// adding nums
+	for(let j = 0; j <= i; j++) {
+		nums += (i + 1) + "   ";
+	}
+	console.log(nums);
 }
