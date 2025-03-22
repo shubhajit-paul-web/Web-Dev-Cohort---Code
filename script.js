@@ -1,26 +1,19 @@
-const prompt = require("prompt-sync")();
-const n = Number(prompt("Enter a number: "));
+// const prompt = require("prompt-sync")();
+// const n = Number(prompt("Enter a number: "));
 
-for(let i = 0; i < n; i++) {
-	let stars = "";
+let arr = [4, 1, 45, 24, 5, 9, 14, 78];
 
-	// Adding left side spaces
-	for(let j = 0; j < (n-i); j++) {
-		stars += " ";
+let max = -Infinity;
+let sMax = -Infinity;
+
+for (let i = 0; i < arr.length; i++) {
+	if (arr[i] > max) {
+		sMax = max;
+		max = arr[i];
+	} else if (arr[i] > sMax && arr[i] < max) {
+		sMax = arr[i];
 	}
-
-	// Adding stars
-	for(let j = 0; j <= i; j++) {
-		if (i === (n-1)) {
-			stars += "* ";
-		} else {
-			if (j === 0 || j === i) {
-				stars += "* ";
-			}
-			if (j !== 0 && j !== i) {
-				stars += "  ";
-			}
-		}
-	}
-	console.log(stars);	
 }
+
+console.log(sMax);
+
