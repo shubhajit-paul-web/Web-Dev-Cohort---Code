@@ -1,11 +1,13 @@
-const prompt = require("prompt-sync")();
-let n = Number(prompt("Enter a number: "));
+const body = document.body;
+const numberElem = document.querySelector(".number");
+const button = document.querySelector("button");
 
-let countDigits = 0;
-
-while(n > 0) {
-	n = Math.floor(n/10);
-	countDigits++;
+function randomNumber() {
+	return Math.floor(Math.random() * 256);
 }
 
-console.log(countDigits);
+button.addEventListener("click", function() {
+	let rgbColorCode = `rgb(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`;
+	numberElem.textContent = rgbColorCode;
+	body.style.backgroundColor = rgbColorCode;
+});
