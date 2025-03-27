@@ -1,13 +1,16 @@
-const body = document.body;
-const numberElem = document.querySelector(".number");
-const button = document.querySelector("button");
+function findElement(arr, element) {
+	let index = -1;
 
-function randomNumber() {
-	return Math.floor(Math.random() * 256);
+	for(let i = 0; i < arr.length; i++) {
+		if (arr[i] === element) {
+			index = i;
+			break;
+		}
+	}
+
+	return index;
 }
 
-button.addEventListener("click", function() {
-	let rgbColorCode = `rgb(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`;
-	numberElem.textContent = rgbColorCode;
-	body.style.backgroundColor = rgbColorCode;
-});
+console.log(findElement([1, 2, 3, 4, 5, 6, 7, 8], "Shubhajit")); // -1
+console.log(findElement([1, 2, 3, 4, 5, 6, 7, 8], 4)); // 3
+
