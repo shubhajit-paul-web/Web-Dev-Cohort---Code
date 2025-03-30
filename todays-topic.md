@@ -1,7 +1,14 @@
-[1] Functions in JavaScript
-    - Parameters in JavaScript - [required , destructured , rest , default ] ✅
-    - Understanding Immediately Invoked Function Expression(IIFE). ✅
-    - More Functions in JavaScript - [`Arrow Function` , `Fat Arrow` , `Anonymous` , `Higher Order` , `Callback` , `First Class` , `Pure Function` , `Impure Function`] ✅
-    - How Passing Arguments Works: Value vs. Reference
-    - Understanding Scoping in JS - [Global scope , Function scope]
-    - Explore more topics
+Date: 30/03/2025
+
+- Bubble Sort (revision)
+- Selection Sort
+- Insertion Sort
+
+(Break)
+
+- Watch this video and practice: https://youtu.be/AaYggzBvD4Q?si=-T2mk3nIPV3DEPSP
+- Solve some previous questions of DSA (Sheryians Web Dev Cohort)
+
+(Break)
+
+- Learn, explore, research whatever I want

@@ -1,11 +1,21 @@
-function rotateElement(arr = []) {
-	for (let i = 0; i < arr.length; i++) {
-		if (arr[i + 1] || arr[i + 1] === 0) {
-			[arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];
+function bubbleSort(arr = []) {
+	let n = arr.length;
+	let swapped;
+
+	for (let i = 0; i < n - 1; i++) {
+		swapped = false;
+
+		for (j = 0; j < n - i - 1; j++) {
+			if (arr[j] > arr[j + 1]) {
+				[arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+				swapped = true;
+			}
 		}
+
+		if (!swapped) break;
 	}
 
 	return arr;
 }
 
-console.log(rotateElement([1, 2, 3, 4, 5]));
+console.log(bubbleSort([13, 46, 24, 52, 20, 9, 0, 8, 40, 5]));
