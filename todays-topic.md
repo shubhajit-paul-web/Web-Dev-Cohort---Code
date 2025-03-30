@@ -1,6 +1,6 @@
 Date: 30/03/2025
 
-- Bubble Sort (revision)
+- Bubble Sort (revision) ✅
 - Selection Sort
 - Insertion Sort
 
