@@ -1,8 +1,16 @@
-Date: 30/03/2025
+Date: 01/04/2025
+
+------------------------------------------
+-> Focus on one thing
+-> Don't move your focus out of your goal
+-> One task at a time
+------------------------------------------
 
 - Bubble Sort (revision) ✅
-- Selection Sort
-- Insertion Sort
+- Selection Sort ✅
+- Insertion Sort (*)
+
+- Time complexity (YouTube: Tap Acedemy -> Apna Collage) (*)
 
 (Break)
 

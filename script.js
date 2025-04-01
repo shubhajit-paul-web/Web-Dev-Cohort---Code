@@ -1,32 +1,58 @@
-function selectionSort(arr = []) {
-	let n = arr.length;
-	
-	for(let i = 0; i < n-1; i++) {
-		let smallestIdx = i; // first index of unsorted part
+// [10, 5, 9, 1, 4, 6, 8]
 
-		for(let j = i+1; j < n; j++) {
-			if (arr[j] < arr[smallestIdx]) {
-				smallestIdx = j; // smallest element index of unsorted part
-			}
-		}
+function insertionSort(arr = []) {
+	const n = arr.length;
 
-		if (smallestIdx !== i) {
-			// swaping elements
-			[arr[smallestIdx], arr[i]] = [arr[i], arr[smallestIdx]];
+	for (let i = 1; i < n; i++) {
+		let currentIdx = i;
+		let j = i - 1;
+
+		while (j >= 0 && arr[j] > arr[currentIdx]) {
+			[arr[j], arr[currentIdx]] = [arr[currentIdx], arr[j]];
+			currentIdx = j;
+			j--;
 		}
 	}
 
 	return arr;
 }
 
-console.log(selectionSort([4, 1, 5, 2, 3, 0]));
-// Step 0: [ 0, 1, 5, 2, 3, 4 ]
-// Step 1: [ 0, 1, 5, 2, 3, 4 ]
-// Step 2: [ 0, 1, 2, 5, 3, 4 ]
-// Step 3: [ 0, 1, 2, 5, 3, 4 ]
-// Step 4: [ 0, 1, 2, 3, 5, 4 ]
-// Step 5: [ 0, 1, 2, 3, 4, 5 ]
+// console.log(insertionSort([10, 5, 9, 1, 4, 6, 2, 8]));
 
-// ----------------------------
-// For strings sorting
-// "Shubhajit Paul" -> first letter -> "S" -> unicode (65)
+const prompt = require("prompt-sync")();
+const arrSize = Number(prompt("Enter a array size: "));
+
+// [[, , ,], [, , ,], [, , ,]]
+if (arrSize) {
+	let arr = new Array(arrSize);
+
+	for (let i = 0; i < arrSize; i++) {
+		arr[i] = new Array(arrSize);
+
+		for (let j = 0; j < arr[i].length; j++) {
+			arr[i][j] = new Array(arrSize);
+
+			for (let k = 0; k < arr[i][j].length; k++) {
+				// const arrElem = Number(prompt(`Row ${i}:${j} Enter array element ${j}: `));
+				arr[i][j][k] = Math.floor(Math.random() * 11);
+			}
+		}
+	}
+
+	console.log(arr);
+}
+
+/* 
+	3D Array:
+
+	[
+		[
+			[1, 2],
+			[3, 4],
+		],
+		[
+			[5, 6],
+			[7, 8],
+		],
+	];
+*/
