@@ -1,8 +1,27 @@
-const images = document.querySelectorAll("img");
-const btn = document.querySelector("button");
+function transpose(matrix) {
+	let row = matrix[0].length; // 3
+	let col = matrix.length; // 2
+	let arr = [];
 
-btn.addEventListener("click", function() {
-    [images[0].src, images[1].src] = [images[1].src, images[0].src];
-});
+	for (let i = 0; i < row; i++) {
+		arr[arr.length] = [];
+		for (let j = 0; j < col; j++) {
+			arr[i][j] = 0;
+		}
+	}
 
-// [var1, var2] = [var2, var1]
+	return arr;
+}
+
+const ans = transpose([
+	[1, 2, 3],
+	[4, 5, 6],
+]);
+
+// [
+// 	[1, 4],
+// 	[2, 5],
+// 	[3, 6],
+// ];
+
+console.log(ans);
