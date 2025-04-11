@@ -1,17 +1,17 @@
-let str = "Aa0DCGf";
-let newStr = "";
+const ul = document.querySelectorAll("li");
 
-for(let i = 0; i < str.length; i++) {
-    let charCode = str.charCodeAt(i);
 
-    if (typeof str[i] === "string") {
-        if (charCode >= 65 && charCode <= 90) {
-            newStr += String.fromCharCode(charCode + 32);
-        } else if(charCode >= 97 && charCode <= 122) {
-            newStr += String.fromCharCode(charCode - 32);
-        }
-    }
-}
+let liContents = Array.from(ul).map(function(li) {
+    return "✅ " + li.textContent;
+});
 
-console.log(newStr);
+console.log(document.documentElement);
 
+
+
+
+// ul.forEach(function(li) {
+//     li.style.backgroundColor = "orange";
+//     li.style.marginBlock = "5px";
+//     li.style.padding = "8px";
+// })
