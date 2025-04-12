@@ -1,17 +1,12 @@
-const ul = document.querySelectorAll("li");
+// const rootNode = document.getRootNode();
+// const html = rootNode.childNodes[0];
+// const body = html.childNodes[2];
+// const div = body.childNodes[1];
+// const h1 = div.childNodes[1];
 
+const h1 = document.querySelector("h1");
 
-let liContents = Array.from(ul).map(function(li) {
-    return "✅ " + li.textContent;
-});
+h1.parentElement.style.backgroundColor = "orange";
+h1.parentElement.style.padding = "10px 30px";
+h1.style.color = "white";
 
-console.log(document.documentElement);
-
-
-
-
-// ul.forEach(function(li) {
-//     li.style.backgroundColor = "orange";
-//     li.style.marginBlock = "5px";
-//     li.style.padding = "8px";
-// })
