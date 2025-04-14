@@ -1,12 +1,22 @@
-// const rootNode = document.getRootNode();
-// const html = rootNode.childNodes[0];
-// const body = html.childNodes[2];
-// const div = body.childNodes[1];
-// const h1 = div.childNodes[1];
+const btn = document.querySelector("button");
+const ul = document.querySelector("ul");
+const elemCountText = document.querySelector(".elements-count");
 
-const h1 = document.querySelector("h1");
+let countElems = 1;
 
-h1.parentElement.style.backgroundColor = "orange";
-h1.parentElement.style.padding = "10px 30px";
-h1.style.color = "white";
+btn.addEventListener("click", function() {
+    if (countElems <= 10) {
+        const li = document.createElement("li");
+        li.textContent = `Item ${countElems}`;
+        ul.appendChild(li);
+    
+        elemCountText.textContent = `${countElems}/10 elements created`;
+        countElems++;
 
+        if(countElems === 11) {
+            btn.disabled = true;
+            btn.style.cursor = "not-allowed";
+            btn.style.opacity = "0.8";
+        }
+    }
+});
