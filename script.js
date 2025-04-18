@@ -1,11 +1,19 @@
-var twoSum = function(nums, target) {
-    let numsMap = new Map();
+// parent elements
+const fruitesList = document.querySelector(".fruites-list");
+const delItemUl = document.querySelector(".del-items");
+const btn = document.querySelector("button");
 
-    for(let i = 0; i < nums.length; i++) {
-        let reqNum = target - nums[i];
+// How to delete element directly without parent
+// element.remove() or node.remove() -> it will remove the element from document object
 
-        if(numsMap.has(reqNum)) {
-            return [numsMap.get(reqNum), i];
-        } else numsMap.set(nums[i], i);
+btn.addEventListener("click", function() {
+    let childNode = fruitesList.children[0];
+
+    let deletedElement = childNode.parentNode.removeChild(childNode);
+
+    delItemUl.append(deletedElement)
+
+    if (fruitesList.children.length === 0) {
+        btn.disabled = true;
     }
-};
+});
