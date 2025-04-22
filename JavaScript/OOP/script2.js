@@ -21,7 +21,7 @@ class Library {
     removeBook(isbn) {
         for(let index in this.books) {
             if (this.books[index].isbn === isbn) {
-                this.books[index].splice(index, 1);
+                this.books.splice(index, 1);
                 return;
             }
         }
@@ -72,6 +72,8 @@ library.addBook(book1);
 library.addBook(book2);
 library.addBook(book3);
 library.addBook(book4);
+
+library.removeBook(9780143453604)
 
 library.returnBook(9780449214923);
 
