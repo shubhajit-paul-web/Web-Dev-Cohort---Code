@@ -1,10 +1,12 @@
-var a = 10; // Global scope (accesible everywhere)
+let n = 5;
 
-function demo() {
-    console.log(a);
-
-    var b = 20; // not accessiable outside the function
+let sum = 0;
+function sumFunc() {
+    if (n > 0) {
+        sum += n--;
+        sumFunc();
+        return sum
+    } else return sum;
 }
 
-demo();
-console.log(b); // b is not defined
+console.log(sumFunc())

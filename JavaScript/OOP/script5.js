@@ -3,7 +3,6 @@ class Student {
         this.firstName = firstName;
         this.lastName = lastName;
     }
-
 }
 
 Student.prototype.printFullName = function() {
