@@ -163,12 +163,14 @@ const foodFour = new FoodItem("Mango", 75, "Fruit");
 
 // Restaurant 1: The Saffron Tree
 const RestaurantKolkata = new Restaurant("The Saffron Tree", [foodOne, foodTwo, foodThree, foodFour]);
+// const RestaurantDelhi = new Restaurant();
 
 // Show menu
 RestaurantKolkata.showMenu();
 
 // Create order
 const orderOne = RestaurantKolkata.createOrder();
+// const orderTwo = RestaurantDelhi.createOrder();
 
 orderOne.addItem(foodOne);
 orderOne.addItem(foodTwo);
@@ -179,4 +181,4 @@ orderOne.updateStatus("Out of Delivery");
 
 RestaurantKolkata.placeOrder(orderOne)
 
-// orderOne.getSummary();
+orderOne.getSummary();
