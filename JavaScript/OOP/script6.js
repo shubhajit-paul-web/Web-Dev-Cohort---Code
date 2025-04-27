@@ -181,4 +181,4 @@ orderOne.updateStatus("Out of Delivery");
 
 RestaurantKolkata.placeOrder(orderOne)
 
-orderOne.getSummary();
+// orderOne.getSummary();
