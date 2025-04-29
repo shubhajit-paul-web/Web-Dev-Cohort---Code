@@ -1,12 +1,14 @@
-let n = 5;
-
-let sum = 0;
-function sumFunc() {
-    if (n > 0) {
-        sum += n--;
-        sumFunc();
-        return sum
-    } else return sum;
+class User {
+    #mobileNumber;
+    constructor(name, gender, age, mobileNum) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+        this.#mobileNumber = mobileNum;
+    }
 }
 
-console.log(sumFunc())
+const user1 = new User("Shubhajit Paul", "Male", 19, 3987345637);
+
+console.log(user1);
+// console.log(user1.#mobileNumber);
