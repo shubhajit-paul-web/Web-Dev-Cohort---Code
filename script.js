@@ -1,14 +1,15 @@
-class User {
-    #mobileNumber;
-    constructor(name, gender, age, mobileNum) {
-        this.name = name;
-        this.gender = gender;
-        this.age = age;
-        this.#mobileNumber = mobileNum;
+let isDataAvailable = true;
+
+const InstaData = new Promise(function(res, rej) {
+    if (isDataAvailable) {
+        res();
+    } else {
+        rej("Instagram data not found!");
     }
-}
+});
 
-const user1 = new User("Shubhajit Paul", "Male", 19, 3987345637);
-
-console.log(user1);
-// console.log(user1.#mobileNumber);
+InstaData.then(function() {
+    console.log("Instagram Data...");
+}).then(function(errorMsg) {
+    console.log(errorMsg);
+})
