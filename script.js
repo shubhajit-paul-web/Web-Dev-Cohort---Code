@@ -1,27 +1,19 @@
-class User {
-    constructor(username, password) {
-        this.username = username;
-        this.password = password;
-    }
-
-    // Private
-    #usernameId = "silent_shubhajit_";
-    #passwordId = 4540789;
-
-    login() {
-        if (this.username === this.#usernameId) {
-            if (this.password == this.#passwordId) {
-                console.log(`Welcome, ${this.#usernameId}`);
-                console.log("Instagram reels...");
-                console.log("Instagram posts...");
+function orderFood() {
+    return new Promise(function(res, rej) {
+        setTimeout(function() {
+            let chance = Math.floor(Math.random() * 101);
+            if (chance <= 30) {
+                rej();
             } else {
-                console.log("Password is incorrect, please try again!");
+                res();
             }
-        } else {
-            console.log("Username is incorrect!");
-        }
-    }
+        }, 2000);
+    });
 }
 
-const userOne = new User("silent_shubhajit_", 4540789);
-userOne.login();
+const orderOne = orderFood();
+orderOne.then(function() {
+    console.log("🍕 Pizza Deliverd!");
+}).catch(function() {
+    console.log("🚫 Deliverd faild!!!");
+});
