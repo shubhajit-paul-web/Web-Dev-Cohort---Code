@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-    <!-- JavaScript -->
-    <script src="./app.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Liter&family=Noto+Serif:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&family=Syne:wght@400..800&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+            <form>
+                <input type="text" placeholder="Search a GitHub user here..." required />
+                <button type="submit">Search</button>
+            </form>
+            <div class="profile">
+                <div class="left-side">
+                    <div class="profile-img">
+                        <img src="https://avatars.githubusercontent.com/u/5274?v=4" alt="" />
+                    </div>
+                    <div class="links">
+                        <p href="#">
+                            <img src="./icons/location-icon.svg" alt="location" />
+                            Sheffield, UK
+                        </p>
+                        <a href="#">
+                            <img src="./icons/email-icon.svg" alt="email" />
+                            example@gmail.com
+                        </a>
+                        <a href="#">
+                            <img src="./icons/link-icon.svg" alt="link" />
+                            https://caolan.uk
+                        </a>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <h1 class="name">Caolan McMahon</h1>
+                    <p class="profile-id">caolan</p>
+                    <p class="connections-showcase">2.4k followers · 51 following</p>
+                    <p class="bio">I write JavaScript, Scheme, Python, and Rust. I enjoy good offline experiences, safely synchronising data, and implementing real-time collaboration.</p>
+                    <p class="repo-count">139 Repos</p>
+                    <div class="repos-container">
+                        <div class="repo">repo-name</div>
+                        <div class="repo">repo-name</div>
+                        <div class="repo">repo-name</div>
+                        <div class="repo">repo-name</div>
+                        <div class="repo">repo-name</div>
+                        <div class="repo">repo-name</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		<!-- JS -->
+		<script src="./app.js"></script>
+	</body>
 </html>
