@@ -1,19 +1,11 @@
-function orderFood() {
-    return new Promise(function(res, rej) {
-        setTimeout(function() {
-            let chance = Math.floor(Math.random() * 101);
-            if (chance <= 30) {
-                rej();
-            } else {
-                res();
-            }
-        }, 2000);
-    });
-}
+const btn = document.querySelector(".btn");
 
-const orderOne = orderFood();
-orderOne.then(function() {
-    console.log("🍕 Pizza Deliverd!");
-}).catch(function() {
-    console.log("🚫 Deliverd faild!!!");
+btn.addEventListener("click", function() {
+    fetch("https://api.github.com/users/async")
+    .then(raw => raw.json())
+    .then((data) => {
+        for(let key in data) {
+            console.log(`${key} => ${data[key]}`);
+        }
+    })
 });
