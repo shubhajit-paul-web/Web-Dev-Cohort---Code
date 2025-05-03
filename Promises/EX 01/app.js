@@ -13,7 +13,7 @@ function formatNumber(num) {
 
 // fetch latest repos by username 
 function fetchRepos(username) {
-    return fetch(`https://api.github.com/users/${username}/repos?sort=created&direction=desc&per_page=9`)
+    return fetch(`https://api.github.com/users/${username}/repos?sort=created&direction=desc&per_page=8`)
     .then(raw => raw.json())
     .then((data) => {
         let reposHTML = ``;
@@ -27,7 +27,10 @@ function fetchRepos(username) {
 
 function fetchUser(username) {
 	fetch(`https://api.github.com/users/${username}`)
-		.then((raw) => raw.json())
+		.then((raw) => {
+            if (raw.ok) return raw.json();
+            else throw new Error("User not found!");
+        })
 		.then((data) => {
 			// location
 			let locationHTML = "";
@@ -88,7 +91,10 @@ function fetchUser(username) {
             fetchRepos(data.login).then(function(reposHTML) {
                 document.querySelector(".repos-container").innerHTML = reposHTML;
             });
-		});
+		})
+        .catch(() => {
+            alert("❌ User not found!!")
+        });
 }
 
 form.addEventListener("submit", function (e) {
