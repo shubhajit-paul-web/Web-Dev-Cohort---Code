@@ -41,6 +41,13 @@ form button {
   background-color: #FF5757;
   color: #fff;
   cursor: pointer;
+  transition: 0.2s;
+}
+form button:hover {
+  background-color: #f04343;
+}
+form button:active {
+  transform: scale(0.96);
 }
 
 /* Profile */
@@ -55,10 +62,10 @@ form button {
 .profile .left-side .profile-img {
   width: 10rem;
   aspect-ratio: 1/1;
-  background-color: orangered;
+  background-color: rgb(231, 193, 179);
   border-radius: 50%;
   overflow: hidden;
-  border: 4px solid #fdc8c8;
+  border: 3px solid rgba(255, 255, 255, 0.8823529412);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   margin-bottom: 2rem;
 }
@@ -98,11 +105,13 @@ form button {
 }
 .profile .right-side .profile-id {
   opacity: 0.78;
-  font-size: 1.28rem;
+  font-size: 1.14rem;
 }
 .profile .right-side .connections-showcase {
-  font-size: 1.2rem;
   margin-block: 1.2rem;
+}
+.profile .right-side .connections-showcase span {
+  font-size: 1.2rem;
 }
 .profile .right-side .bio {
   opacity: 0.76;
@@ -117,7 +126,7 @@ form button {
   padding: 0.2rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 1.1rem;
 }
 .profile .right-side .repos-container .repo {
   font-size: 0.93rem;
