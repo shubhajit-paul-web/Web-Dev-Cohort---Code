@@ -1,11 +1,25 @@
-const btn = document.querySelector(".btn");
+const pizzaOrder = new Promise((resolve, reject) => {
+    let isOrdered = true;
 
-btn.addEventListener("click", function() {
-    fetch("https://api.github.com/users/async")
-    .then(raw => raw.json())
-    .then((data) => {
-        for(let key in data) {
-            console.log(`${key} => ${data[key]}`);
-        }
-    })
+    if (isOrdered) {
+        resolve("Order successfuly completed...")
+    } else {
+        reject("Sorry, your order is cancled...");
+    }
 });
+
+pizzaOrder
+.then((data) => {
+    console.log(data);
+    return data;
+})
+.then((data) => {
+    console.log(data,"hey... second time");
+})
+.then(() => {
+    console.log("end...");
+    
+})
+.catch((data) => {
+    console.log(data);
+})

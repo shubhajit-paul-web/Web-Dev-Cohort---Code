@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Modern Dark Mode Todo List</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+		<style>
+			body {
+				font-family: "Inter", sans-serif;
+			}
+			.glassmorphism {
+				background: rgba(255, 255, 255, 0.05);
+				backdrop-filter: blur(10px);
+				border: 1px solid rgba(255, 255, 255, 0.1);
+			}
+			.hover-scale {
+				transition: transform 0.2s ease-in-out;
+			}
+			.hover-scale:hover {
+				transform: scale(1.02);
+			}
+			.todoItemDone span {
+				text-decoration: line-through;
+				opacity: 0.5;
+			}
+			.todoItemDone #done-btn {
+				cursor: not-allowed;
+				opacity: 0.5;
+			}
+		</style>
+        <script src="./app.js" defer></script>
+	</head>
+	<body class="bg-gradient-to-br from-gray-900 to-gray-800 min-h-screen flex items-center justify-center p-6">
+		<div class="w-full max-w-[45rem] glassmorphism rounded-2xl shadow-2xl p-8">
+			<h1 class="text-3xl font-bold text-white mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">Todo List</h1>
+
+			<!-- Input Form -->
+			 <div class="mb-8">
+				<div class="flex mb-[5px]" id="form">
+					<input type="text" id="todoInput" name="todoInput" placeholder="Add a new task..." class="flex-1 bg-gray-900 text-white rounded-l-xl p-4 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-300" />
+					<button class="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 rounded-r-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-300" id="todo-add-btn">Add</button>
+				</div>
+				<p class="text-red-600 bg-red-300 py-[0.5rem] px-[0.8rem] rounded hidden" id="error-msg">Input field is blank!</p>
+			 </div>
+
+			<!-- Todo List -->
+			<ul id="todoList" class="space-y-4">
+				<!-- Sample Todo Item -->
+				<li class="flex items-center justify-between bg-gray-900 p-4 rounded-xl hover-scale glassmorphism todoItemDone">
+					<span class="text-white flex-1 font-medium mr-[1rem] overflow-hidden">Sample Task</span>
+					<div class="flex space-x-3">
+						<button class="bg-green-500 text-white px-3 py-1 rounded-lg hover:bg-green-600 transition-all duration-200" id="done-btn">Done</button>
+						<button class="bg-yellow-500 text-white px-3 py-1 rounded-lg hover:bg-yellow-600 transition-all duration-200" id="edit-btn">Edit</button>
+						<button class="bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600 transition-all duration-200" id="remove-btn">Remove</button>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
