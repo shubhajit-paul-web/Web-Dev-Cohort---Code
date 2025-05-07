@@ -4,7 +4,7 @@ Master **Asynchronous JavaScript** (Promises) — from **Beginner to Advanced** 
 
 ---
 
-## 🧠 Structure of This Plan
+## 🧠 Structure of This Plan 
 
 Each step has:
 1. 🔥 **80/20 Focus List**: Key things to learn first (most impact)
